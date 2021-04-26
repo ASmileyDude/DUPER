@@ -1,3 +1,4 @@
+const token = 'ODM1ODUzOTIxNzQ2MDI2NTE3.YIVfoA.nibnKpHdbGWvOc3F84ucj-NTk7A'
 const discord = require('discord.js')
 const client = new discord.Client
 const prefix = "."
@@ -74,4 +75,4 @@ client.on('guildMemberAdd', member => {
   WelcomeChannel.send(Welcome);
 });
 
-client.login(process.env.TOKEN)
+client.login(token)
