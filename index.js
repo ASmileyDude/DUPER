@@ -67,11 +67,21 @@ client.on('message', async (message) => {
 client.on('guildMemberAdd', member => {
   const WelcomeChannel = member.guild.channels.cache.get('835856295385890886');
   const Welcome = new discord.MessageEmbed()
-  .setTitle(`**WELCOME**`)
+  .setTitle(`**IRRIVALS**`)
   .setDescription(`Welcome to the server, ${member}!`)
   .setImage(`https://th.bing.com/th/id/Rb5551cd0ca1b2e7e78bcb299c27040e0?rik=WhsZgB78v4%2bg3g&pid=ImgRaw`)
   .setTimestamp()
   WelcomeChannel.send(Welcome);
+});
+
+client.on('guildMemberRemove', member => {
+  const LeaveChannel = member.guild.channels.cache.get('835856323781984316');
+  const Leave = new discord.MessageEmbed()
+  .setTitle(`**DEPARTURES**`)
+  .setDescription(`Goodbye, ${member}!`)
+  .setImage(`https://th.bing.com/th/id/Rb5551cd0ca1b2e7e78bcb299c27040e0?rik=WhsZgB78v4%2bg3g&pid=ImgRaw`)
+  .setTimestamp()
+  LeaveChannel.send(Leave);
 });
 
 client.login(process.env.TOKEN)
