@@ -66,7 +66,7 @@ client.on('message', async (message) => {
 
 client.on('guildMemberAdd', member => {
   const WelcomeChannel = member.guild.channels.cache.get('835856295385890886');
-  WelcomeChannel.send('Welcome to the server, <@${member.id}>')
+  WelcomeChannel.send('Welcome to the server, <@${member}>')
 });
 
 client.login(process.env.TOKEN)
