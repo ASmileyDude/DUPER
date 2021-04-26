@@ -47,7 +47,7 @@ client.on('message', async (message) => {
     .setTitle(`**IP**`)
     .setDescription(`*Shows you the ip*`)
     .addFields(
-      { name: `@<${message.author.username}>`, value: `**IP:** *SMPxDUPE.minehut.gg*`,}
+      { name: `@${message.author.username}`, value: `**IP:** *SMPxDUPE.minehut.gg*`,}
     )
     .setTimestamp()
     message.channel.send(IP)
