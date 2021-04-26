@@ -1,4 +1,3 @@
-const token = "ODM1ODUzOTIxNzQ2MDI2NTE3.YIVfoA.gentB6P5uc_c8WkRFqgFq0ltDcw"
 const discord = require('discord.js')
 const client = new discord.Client
 const prefix = "."
@@ -41,4 +40,4 @@ client.on('message', async (message) => {
 }
 });
 
-client.login(token)
+client.login(process.env.TOKEN)
