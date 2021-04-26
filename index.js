@@ -66,7 +66,12 @@ client.on('message', async (message) => {
 
 client.on('guildMemberAdd', member => {
   const WelcomeChannel = member.guild.channels.cache.get('835856295385890886');
-  WelcomeChannel.send(`Welcome to the server, ${member}`)
+  const Welcome = new discord.MessageEmbed()
+  .setTitle(`**WELCOME**`)
+  .setDescription(`Welcome ` + member + ` to the server!`)
+  .setImage(`https://th.bing.com/th/id/Rb5551cd0ca1b2e7e78bcb299c27040e0?rik=WhsZgB78v4%2bg3g&pid=ImgRaw`)
+  .setTimestamp()
+  WelcomeChannel.send(Welcome)
 });
 
 client.login(process.env.TOKEN)
