@@ -64,4 +64,8 @@ client.on('message', async (message) => {
   }
 })
 
+client.on('guildMemberAdd', member => {
+  member.guild.channels.get('835856295385890886').send("Welcome");
+});
+
 client.login(process.env.TOKEN)
