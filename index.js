@@ -40,17 +40,18 @@ client.on('message', async (message) => {
 }
 });
 
+
 client.on('message', async (message) => {
-    if(message.content == '!ip'){
-        const IP = new discord.MessageEmbed()
-        .setTitle(`**IP**`)
-        .setDescription(`*Shows you the ip*`)
-        .addFields(
-            { name: `${message.author}`, value: `**IP:** *SMPxDUPE.minehut.gg*`,}
-        )
-        .setTimestamp();
-        message.channel.send(IP)
-    }
-)
+  if(message.content == '!ip'){
+    const IP = new discord.MessageEmbed()
+    .setTitle(`**IP**`)
+    .setDescription(`*Shows you the ip*`)
+    .addFields(
+      { name: `${message.author}`, value: `**IP:** *SMPxDUPE.minehut.gg*`,}
+    )
+    .setTimestamp()
+    message.channel.send(IP)
+  }
+})
 
 client.login(process.env.TOKEN)
