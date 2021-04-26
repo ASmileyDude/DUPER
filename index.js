@@ -71,7 +71,7 @@ client.on('guildMemberAdd', member => {
   .setDescription(`Welcome to the server, ${member}!`)
   .setImage(`https://th.bing.com/th/id/Rb5551cd0ca1b2e7e78bcb299c27040e0?rik=WhsZgB78v4%2bg3g&pid=ImgRaw`)
   .setTimestamp()
-  WelcomeChannel.send(Welcome);
+  WelcomeChannel.send(Welcome)
 });
 
 client.on('guildMemberRemove', member => {
@@ -81,7 +81,7 @@ client.on('guildMemberRemove', member => {
   .setDescription(`Goodbye, ${member}!`)
   .setImage(`https://th.bing.com/th/id/Rb5551cd0ca1b2e7e78bcb299c27040e0?rik=WhsZgB78v4%2bg3g&pid=ImgRaw`)
   .setTimestamp()
-  LeaveChannel.send(Leave);
+  LeaveChannel.send(Leave)
 });
 
 client.login(process.env.TOKEN)
